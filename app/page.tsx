@@ -59,7 +59,7 @@ export default function Home() {
 
                 {/* Photo */}
                 <Image
-                  src="/images/Another.jpg"
+                  src="/images/CV.png"
                   alt="Kimlong Neng"
                   fill
                   className="object-cover object-center"
