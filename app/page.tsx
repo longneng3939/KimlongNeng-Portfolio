@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 
 const SKILLS = [
   "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Python",
-  "C++", "SQL", "NoSQL","Flutter", "Git", "RESTful APIs", "System Architecture","Ai training"
+  "C++", "SQL", "NoSQL", "Flutter", "Git", "RESTful APIs", "System Architecture", "Ai training"
 ];
 
 export default function Home() {
