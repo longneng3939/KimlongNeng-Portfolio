@@ -1,0 +1,115 @@
+====================================================
+  GIT SETUP, PUSH & PULL — COMPLETE GUIDE
+====================================================
+
+---------------------------------------
+1. FIRST-TIME SETUP (do this only once)
+---------------------------------------
+
+# Set your name and email (shows up in commits)
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+
+---------------------------------------
+2. INITIALIZE (if repo not created yet)
+---------------------------------------
+
+# Inside your project folder:
+git init
+
+
+---------------------------------------
+3. LINK TO GITHUB REMOTE (do once)
+---------------------------------------
+
+# Go to https://github.com/new → create an EMPTY repo (no README)
+# Then copy the URL and run:
+
+git remote add origin https://github.com/longneng3939/my-portfolio.git
+
+# Check remote is linked:
+git remote -v
+
+
+---------------------------------------
+4. STAGE YOUR FILES
+---------------------------------------
+
+# Stage everything (all files):
+git add .
+
+# Stage a single file:
+git add app/projects/page.tsx
+
+
+---------------------------------------
+5. COMMIT YOUR CHANGES
+---------------------------------------
+
+git commit -m "your message here"
+
+# Example:
+git commit -m "Add projects page with image and link"
+
+
+---------------------------------------
+6. PUSH TO GITHUB
+---------------------------------------
+
+# First push (sets upstream):
+git push -u origin master
+
+# After first time, you just do:
+git push
+
+
+---------------------------------------
+7. PULL FROM GITHUB (get latest changes)
+---------------------------------------
+
+git pull
+
+# Or more explicitly:
+git pull origin master
+
+
+---------------------------------------
+8. CHECK STATUS (use this often!)
+---------------------------------------
+
+# See what files changed / need staging:
+git status
+
+# See commit history:
+git log --oneline
+
+
+---------------------------------------
+9. DAILY WORKFLOW SUMMARY
+---------------------------------------
+
+Step 1 → Make changes to your code
+Step 2 → git add .
+Step 3 → git commit -m "describe what you changed"
+Step 4 → git push
+
+That's it! Repeat steps 1–4 every time you update.
+
+
+---------------------------------------
+10. COMMON ERRORS & FIXES
+---------------------------------------
+
+ERROR: "remote origin already exists"
+FIX:   git remote set-url origin https://github.com/longneng3939/my-portfolio.git
+
+ERROR: "rejected — fetch first"
+FIX:   git pull origin master --rebase
+       then: git push
+
+ERROR: "Please tell me who you are"
+FIX:   git config --global user.email "you@example.com"
+       git config --global user.name "Your Name"
+
+====================================================
