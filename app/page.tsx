@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Terminal, ArrowRight } from "lucide-react";
+import { Terminal, ArrowRight, FileText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
@@ -103,6 +103,13 @@ export default function Home() {
                 className="flex items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/60 transition-colors uppercase tracking-wider text-sm font-mono"
               >
                 Contact Me
+              </Link>
+              <Link
+                href="/cv"
+                className="flex items-center gap-2 px-6 py-3 border border-white/20 hover:border-white hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm font-mono group"
+              >
+                <FileText size={16} />
+                View CV
               </Link>
             </div>
           </motion.div>
