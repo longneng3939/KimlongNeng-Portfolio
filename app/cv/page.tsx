@@ -172,6 +172,60 @@ export default function CVPage() {
           </p>
         </motion.div>
 
+        
+         {/* ══ CV COLLAPSIBLE — bottom of page ══ */}
+      <div className="max-w-5xl mx-auto px-6 pb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="border border-white/10 bg-[#050505] relative overflow-hidden"
+        >
+          {/* top accent */}
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+
+          {/* Toggle button */}
+          <button
+            onClick={() => setCvOpen((prev) => !prev)}
+            className="w-full flex items-center justify-between px-8 py-5 group"
+          >
+            <div className="flex items-center gap-3">
+              <FileText size={15} className="text-white/20" />
+              <span className="font-mono text-cyan-400 text-m uppercase tracking-widest">
+                view_cv_document
+              </span>
+            </div>
+            <div className="flex items-center gap-2 font-bold text-cyan-400 text-xs">
+              <span>{cvOpen ? "collapse" : "click to expand"}</span>
+              <ChevronDown
+                size={15}
+                className={`transition-transform duration-300 ${cvOpen ? "rotate-180" : "rotate-0"
+                  }`}
+              />
+            </div>
+          </button>
+
+          {/* Collapsible content */}
+          <motion.div
+            initial={false}
+            animate={cvOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            style={{ overflow: "hidden" }}
+          >
+            <div className="px-8 pb-8 flex justify-center">
+              <div className="relative w-full max-w-2xl" style={{ aspectRatio: "210/297" }}>
+                <Image
+                  src="/images/cvfull.png"
+                  alt="Kimlong Neng CV"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
 
         {/* ── Grid Layout ── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -368,58 +422,7 @@ export default function CVPage() {
         </div>
       </div>
 
-      {/* ══ CV COLLAPSIBLE — bottom of page ══ */}
-      <div className="max-w-5xl mx-auto px-6 pb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="border border-white/10 bg-[#050505] relative overflow-hidden"
-        >
-          {/* top accent */}
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-
-          {/* Toggle button */}
-          <button
-            onClick={() => setCvOpen((prev) => !prev)}
-            className="w-full flex items-center justify-between px-8 py-5 group"
-          >
-            <div className="flex items-center gap-3">
-              <FileText size={15} className="text-white/20" />
-              <span className="font-mono text-cyan-400 text-m uppercase tracking-widest">
-                view_cv_document
-              </span>
-            </div>
-            <div className="flex items-center gap-2 font-bold text-cyan-400 text-xs">
-              <span>{cvOpen ? "collapse" : "click to expand"}</span>
-              <ChevronDown
-                size={15}
-                className={`transition-transform duration-300 ${cvOpen ? "rotate-180" : "rotate-0"
-                  }`}
-              />
-            </div>
-          </button>
-
-          {/* Collapsible content */}
-          <motion.div
-            initial={false}
-            animate={cvOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            style={{ overflow: "hidden" }}
-          >
-            <div className="px-8 pb-8 flex justify-center">
-              <div className="relative w-full max-w-2xl" style={{ aspectRatio: "210/297" }}>
-                <Image
-                  src="/images/cvfull.png"
-                  alt="Kimlong Neng CV"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      </div>
+     
 
       <footer className="border-t border-white/10 py-8 text-center text-xs font-mono text-white/40">
         <p>SYSTEM INITIATED. © {new Date().getFullYear()} KIMLONG NENG. ALL PROTOCOLS SECURED.</p>
