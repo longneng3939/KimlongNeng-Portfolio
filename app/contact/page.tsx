@@ -46,11 +46,11 @@ export default function ContactPage() {
           </p>
 
           <a
-            href="mailto:kimlongneng@example.com"
+            href="https://www.linkedin.com/in/neng-kimlong-212828363/"
             className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-bold hover:bg-white/90 transition-all mb-12 uppercase tracking-wide"
           >
             <Mail size={20} />
-            Open Comm Channel
+            Contact Both Link and Github
           </a>
 
           <div className="flex items-center justify-center gap-6 border-t border-white/10 pt-8 mt-4">

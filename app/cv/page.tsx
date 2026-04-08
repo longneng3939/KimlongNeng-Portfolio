@@ -170,6 +170,8 @@ export default function CVPage() {
           <p className="max-w-2xl text-white/60 leading-relaxed text-base">
             {CV.summary}
           </p>
+
+          {/* Download Button */}
         </motion.div>
 
         
@@ -191,7 +193,7 @@ export default function CVPage() {
           >
             <div className="flex items-center gap-3">
               <FileText size={15} className="text-white/20" />
-              <span className="font-mono text-purple-400 text-m uppercase tracking-widest">
+              <span className="font-mono text-cyan-400 text-m uppercase tracking-widest">
                 view_cv_document
               </span>
             </div>
@@ -212,7 +214,7 @@ export default function CVPage() {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             style={{ overflow: "hidden" }}
           >
-            <div className="px-8 pb-8 flex justify-center">
+            <div className="px-8 pb-8 flex flex-col items-center gap-6">
               <div className="relative w-full max-w-2xl" style={{ aspectRatio: "210/297" }}>
                 <Image
                   src="/images/cvfull.png"
@@ -221,6 +223,15 @@ export default function CVPage() {
                   className="object-contain"
                 />
               </div>
+              {/* Download button below image */}
+              <a
+                href="/images/cvfull.png"
+                download="Kimlong_Neng_CV.png"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-bold uppercase tracking-wider text-sm hover:bg-white/90 transition-all"
+              >
+                <FileText size={16} />
+                Download CV as Image
+              </a>
             </div>
           </motion.div>
         </motion.div>
@@ -422,11 +433,6 @@ export default function CVPage() {
         </div>
       </div>
 
-     
-
-      <footer className="border-t border-white/10 py-8 text-center text-xs font-mono text-white/40">
-        <p>SYSTEM INITIATED. © {new Date().getFullYear()} KIMLONG NENG. ALL PROTOCOLS SECURED.</p>
-      </footer>
     </div>
   );
 }
