@@ -191,7 +191,7 @@ export default function CVPage() {
           >
             <div className="flex items-center gap-3">
               <FileText size={15} className="text-white/20" />
-              <span className="font-mono text-cyan-400 text-m uppercase tracking-widest">
+              <span className="font-mono text-purple-400 text-m uppercase tracking-widest">
                 view_cv_document
               </span>
             </div>
