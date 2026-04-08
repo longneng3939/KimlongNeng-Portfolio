@@ -44,28 +44,25 @@ export default function Home() {
                 </h1>
               </div>
 
-              {/* Picture Placeholder */}
+              {/* Profile Photo */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="flex-shrink-0 w-48 h-56 md:w-64 md:h-72 lg:w-84 lg:h-96 border border-white/20 relative overflow-hidden group rounded-lg 2xl:rounded-none"
+                className="flex-shrink-0 w-48 h-60 md:w-60 md:h-76 lg:w-72 lg:h-96 relative overflow-hidden group rounded-3xl ring-1 ring-white/15 shadow-[0_0_40px_rgba(255,255,255,0.06)]"
               >
-                {/* Decorative corner accents */}
-                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-white/60" />
-                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-white/60" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-white/60" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-white/60" />
-
                 {/* Photo */}
                 <Image
                   src="/images/CV.png"
                   alt="Kimlong Neng"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
 
-                {/* Scan-line hover effect */}
+                {/* Bottom gradient fade for depth */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+
+                {/* Subtle scan-line hover effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-1000 pointer-events-none" />
               </motion.div>
             </div>
