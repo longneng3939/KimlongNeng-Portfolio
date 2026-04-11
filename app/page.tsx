@@ -91,7 +91,7 @@ export default function Home() {
               I specialize in building high-performance, scalable web applications and technical infrastructure. Deeply passionate about modern architectures, system optimization, and writing clean, maintainable code.
             </p>
 
-               {/* Goals Section */}
+            {/* Goals Section */}
             <div className="pt-12 space-y-4">
               <h3 className="font-mono text-sm text-white/40 uppercase">Career Goals_</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
